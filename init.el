@@ -35,7 +35,7 @@
 (tool-bar-mode 0)
 (show-paren-mode 1)
 (global-undo-tree-mode)
-;;;(global-auto-complete-mode t)
+(global-auto-complete-mode t)
 (setq js-switch-indent-offset 4)
 (add-hook 'css-mode-hook
           (defun elmord/css-mode-hook ()
@@ -82,3 +82,4 @@
 (global-set-key (kbd "C-x K") 'ask-and-kill-unmodified-buffers)
 
 (add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
