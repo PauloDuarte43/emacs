@@ -36,7 +36,10 @@
 (show-paren-mode 1)
 (global-undo-tree-mode)
 (global-auto-complete-mode t)
+<<<<<<< HEAD
 (add-hook 'after-init-hook #'global-flycheck-mode)
+=======
+>>>>>>> 2d8ae4a47a0f3823b1693a29315d0b2419f11cfc
 (setq js-switch-indent-offset 4)
 (add-hook 'css-mode-hook
           (defun elmord/css-mode-hook ()
@@ -81,3 +84,6 @@
       (mapc #'kill-buffer killed)
       (message "%d buffers killed: %s" (length killed) killed))))
 (global-set-key (kbd "C-x K") 'ask-and-kill-unmodified-buffers)
+
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
